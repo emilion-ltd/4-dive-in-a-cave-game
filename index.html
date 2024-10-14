@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>משחק צלילה תת-ימי</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>ברוכים הבאים למשחק הצלילה התת-ימי</h1>
+            <button id="start-button">התחל משחק</button>
+        </div>
+        <div id="cave-top" class="cave-wall"></div>
+        <div id="cave-bottom" class="cave-wall"></div>
+        <div id="diver"></div>
+        <div id="bubbles"></div>
+        <div id="score">ניקוד: <span>0</span></div>
+        <div id="lives">חיים: <span>3</span></div>
+        <div id="gold">זהב: <span>0</span></div>
+        <div id="settings">
+            <label for="transition-time">זמן תגובה (מילישניות): </label>
+            <input type="range" id="transition-time" min="0" max="100" value="20" step="1">
+            <span id="transition-time-value">20</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

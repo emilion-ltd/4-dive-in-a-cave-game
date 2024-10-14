@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#start-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #00bfff, #00008b);
+    color: white;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, #00bfff, #00008b);
+    overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('seaweed.png'); /* תצטרך להוסיף תמונה של אצות */
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+#diver {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('https://www.svgrepo.com/show/25797/diver.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all var(--diver-transition-time) linear;
+    z-index: 2;
+}
+
+#bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: rise 5s infinite;
+}
+
+@keyframes rise {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-20px); }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.cave-wall {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: #2a1a0a;
+    z-index: 1;
+}
+
+#cave-top {
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#cave-bottom {
+    bottom: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.obstacle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red; /* צבע המכשול */
+    z-index: 2;
+}
+
+.gift {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: gold; /* צבע הזהב */
+    z-index: 2;
+}
